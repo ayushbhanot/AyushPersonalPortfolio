@@ -4,9 +4,9 @@ const darkTheme = {
   card: "#121418",
   text_primary: "#FFFFFF",
   text_secondary: "#B0B0B0",
-  button_primary: "#00FFFF",
+  button_primary: "#3AAFB9",
   button_hover: "#A78BFA",
-  accent: "#00FFFF",
+  accent: "#3AAFB9",
   border: "#2C2E33",
   shadow: "0px 4px 6px rgba(0, 0, 0, 0.2)",
 };
