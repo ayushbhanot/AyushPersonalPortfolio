@@ -146,29 +146,29 @@ line-height: 32px;
 `;
 
 const ResumeButton = styled.a`
--webkit-appearence: button;
--moz-appearence: button;
-appearence: button;
-text-decoration: one;
-width: auto%;
-max-width: 300px;
-text-align: center;
-padding: 16px 0;
-color: ${({ theme }) => theme.white};
-border-radius: 20px;
-cursor: pointer;
-font-size: 20px;
-font-weight: 600;
-transition: all 0.2s ease-in-out !important;
-background: hsla(271, 100%, 50%, 1);
-background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-box-shadow: 20px 20px 60px #1F2634,
--20px -20px 60px #1F2634;
-&:hover {
-transform: scale(1.05);
-}
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  width: auto%;
+  max-width: 300px;
+  text-align: center;
+  padding: 16px 0;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out !important;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Gradient based on website theme */
+  background: linear-gradient(to right, #007bff, #00c853); 
+  color: #fff; 
+
+  &:hover {
+    transform: scale(1.05); /* This line was missing a semicolon */
+    background: linear-gradient(to right, #0056b3, #009432); 
+  }
 `;
 
 const ParticleContainer = styled.div`
