@@ -31,7 +31,7 @@ const Title = styled.div`
     margin-top: 12px;
     color: ${({ theme }) => theme.text_primary};
 
-    media (max-width: 768 px) {
+    @media (max-width: 768 px) {
         margin-top: 12px;
         font-size: 32px;
     }
@@ -124,7 +124,7 @@ const Skills = () => {
         <Container id="skills">
             <Wrapper>
                 <Title>Skills</Title>
-                <Description>These are some of the skills I have gained so far throughout the past few years</Description>
+                <Description>These are some of the skills I have gained so far throughout the past few years.</Description>
                 <SkillsContainer>
           {skills.map((skill) => (
             <Skill>
