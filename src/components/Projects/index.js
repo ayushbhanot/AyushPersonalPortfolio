@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import ProjectCard from '../Cards/projectCard';
+import ProjectModal from '../Project-Popup'; // Import the modal component
+import { projects } from '../../data/constant'; // Import the projects data
 
 const Container = styled.div`
     display: flex;
@@ -61,22 +63,24 @@ const ToggleGroup = styled.div`
     }
 `;
 
-const ToggleButton = styled.div`
+const ToggleButton = styled.div`*/ USE THIS WHEN YOU HAVE MORE PROJECTS TO FILTER
     padding: 8px 18px;
     cursor: pointer;
     border-radius: 6px;
-    background-color: #3AAFB9;
+     background-color: #3AAFB9;
     color: ${({ active, theme }) => (active ? 'white' : theme.primary)};
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 
-    &:hover {
+     &:hover {
         background-color: ${({ theme }) => theme.primary + '20'};
+        transform: scale(1.05); 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     @media (max-width: 768px) {
         padding: 6px 8px;
         border-radius: 4px;
-    }
+    }*/
 `;
 
 const Selector = styled.div`
@@ -92,17 +96,8 @@ const CardContainer = styled.div`
     gap: 20px;
 `;
 
-const Projects = () => {
-    const [active, setToggle] = useState('ALL');
-
-    return (
-        <Container id="projects">
-            <Wrapper>
-                <Title>Projects</Title>
-                <Description>
-                    A showcase of the diverse projects I've worked on, demonstrating my skills in software development, problem-solving, and innovation.
-                </Description>
-
+/* USE THIS WHEN I HAVE MORE PROJECTS
+                
                 <ToggleGroup>
                     {['ALL', 'WEB', 'Cloud Computing', 'Machine Learning'].map((label) => (
                         <React.Fragment key={label}>
@@ -115,12 +110,48 @@ const Projects = () => {
                             {label !== 'Machine Learning' && <Selector />}
                         </React.Fragment>
                     ))}
+                </ToggleGroup>*/
+
+
+const Projects = () => {
+    const [active, setToggle] = useState('ALL'); // Manage toggle state
+    const [openModal, setOpenModal] = useState({ state: false, project: null }); // Modal state
+
+    return (
+        <Container id="projects">
+            <Wrapper>
+                <Title>Projects</Title>
+                <Description>
+                    A showcase of the diverse projects I've worked on, demonstrating my skills in software development, problem-solving, and innovation.
+                </Description>
+
+
+                <ToggleGroup>
+                    <ToggleButton active={true}></ToggleButton>
                 </ToggleGroup>
 
+
+
                 <CardContainer>
-                    <ProjectCard />
+                    {projects
+                        .filter((item) => active === 'ALL' || item.category === active.toLowerCase())
+                        .map((project) => (
+                            <ProjectCard
+                                key={project.id}
+                                project={project}
+                                setOpenModal={setOpenModal} // Pass modal handler
+                            />
+                        ))}
                 </CardContainer>
             </Wrapper>
+
+            {/* Project Modal */}
+            {openModal.state && (
+                <ProjectModal
+                    openModal={openModal}
+                    setOpenModal={setOpenModal}
+                />
+            )}
         </Container>
     );
 };

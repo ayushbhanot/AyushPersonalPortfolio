@@ -139,9 +139,8 @@ export const experiences = [
 
   export const projects = [
     {
-      id: 9,
-      title: "Trackify",
-      date: "Jun 2023 - Jul 2023",
+      id: 2,
+      title: "Destination Europe",
       description:
         "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
       image:
