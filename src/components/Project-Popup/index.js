@@ -94,11 +94,11 @@ const Tags = styled.div`
 const Tag = styled.div`
   font-size: 14px;
   font-weight: 400;
-  color: ${({ theme }) => theme.primary};
+  color: #3AAFB9;
   margin: 4px;
   padding: 4px 8px;
   border-radius: 8px;
-  background-color: ${({ theme }) => theme.primary + 20};
+  background-color: rgba(58, 175, 185, 0.2);
   @media only screen and (max-width: 600px) {
     font-size: 12px;
   }
@@ -156,29 +156,27 @@ const Button = styled.a`
   text-align: center;
   font-size: 16px;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ dull, theme }) =>
+    dull ? theme.text_secondary : '#fff'}; 
   padding: 12px 16px;
   border-radius: 8px;
-  background-color: ${({ theme }) => theme.primary};
-  ${({ dull, theme }) =>
-    dull &&
-    `
-    background-color: ${theme.bgLight};
-    color: ${theme.text_secondary};
-    &:hover {
-      background-color: ${theme.bg + 99};
-    }
-  `}
+  background-color: ${({ dull }) =>
+    dull ? '#25272C' : '#3AAFB9'}; /
   cursor: pointer;
   text-decoration: none;
   transition: all 0.5s ease;
+
   &:hover {
-    background-color: ${({ theme }) => theme.primary + 99};
+    background-color: ${({ dull }) =>
+      dull ? '#3AAFB9' : '#329CA8'}; 
+    color: #fff; 
   }
+
   @media only screen and (max-width: 600px) {
     font-size: 12px;
   }
 `;
+
 
 const ProjectModal = ({ openModal, setOpenModal }) => {
   const project = openModal?.project;
@@ -224,14 +222,19 @@ const ProjectModal = ({ openModal, setOpenModal }) => {
               </Members>
             </>
           )}
-          <ButtonGroup>
-            <Button dull href={project?.github} target="new">
-              View Code
-            </Button>
-            <Button href={project?.webapp} target="new">
-              View Live App
-            </Button>
-          </ButtonGroup>
+<ButtonGroup>
+  {project?.github && (
+    <Button dull href={project.github} target="new">
+      View GitHub Repo
+    </Button>
+  )}
+  {project?.webapp && (
+    <Button href={project.webapp} target="new">
+      View Live App
+    </Button>
+  )}
+</ButtonGroup>
+
         </Wrapper>
       </Container>
     </Modal>
