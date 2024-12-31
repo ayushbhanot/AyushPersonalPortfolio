@@ -9,6 +9,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import ExperienceCard from '../Cards/ExperienceCard.jsx';
 import { experiences } from '../../data/constant';
+import { motion } from 'framer-motion';
 
 const Container = styled.div`
     display: flex;
@@ -74,6 +75,7 @@ const TimelineSection = styled.div`
 
 
 
+
 const Experience = () => {
     return (
         <Container id="experience">
@@ -83,15 +85,65 @@ const Experience = () => {
                 This is a showcase of my professional experiences and contributions as a software engineer.
                 </Desc>
                 <TimelineSection>
-                    <Timeline>
-                        {experiences.map((experience,index) => (
-                            <TimelineItem>
+                    <Timeline
+                     as={motion.div}
+                     initial="hidden"
+                     whileInView="visible"
+                     viewport={{ once: true }}
+                     variants={{
+                         hidden: { opacity: 0 },
+                         visible: {
+                             opacity: 1,
+                             transition: {
+                                 staggerChildren: 0.2,
+                             },
+                            },
+                        }}>
+                        {experiences.map((experience, index) => (
+                            <TimelineItem 
+                              as={motion.div}
+                              key={experience.id} 
+                              initial={{ opacity: 0, y: 50 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.5, delay: index * 0.2 }}
+                            >
                                 <TimelineSeparator>
-                                    <TimelineDot variant="outlined" color="secondary"  sx={{ width: '30px', height: '30px', border: '8px solid #3AAFB9' }}/>
-                                    {index !== experiences.length - 1 && <TimelineConnector style={{ background: `${({ theme }) => theme.text_primary+95}`, width: '5px' }} />}
+                                    <TimelineDot
+                                      as={motion.div}
+                                      initial={{ scale: 0 }}
+                                      whileInView={{ scale: 1 }}
+                                      transition={{ duration: 0.5, delay: index * 0.2 }}
+                                      variant="outlined"
+                                      color="secondary"
+                                      sx={{ width: '30px', height: '30px', border: '8px solid #3AAFB9' }}
+                                    />
+                                    {index !== experiences.length - 1 && (
+                                        <TimelineConnector
+                                          as={motion.div}
+                                          initial={{ height: 0 }}
+                                          whileInView={{ height: `${experiences[index].duration * 50}px` }}
+                                          transition={{ duration: 0.5, delay: index * 0.2 }}
+                                          style={{
+                                              background: '#3AAFB9',
+                                              width: '5px',
+                                          }}
+                                        />
+                                    )}
                                 </TimelineSeparator>
-                                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                                    <ExperienceCard experience={experience}/>
+                                <TimelineContent 
+                                  as={motion.div}
+                                  initial={{ opacity: 0, x: -50 }}
+                                  whileInView={{ opacity: 1, x: 0 }}
+                                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                                  sx={{ py: '12px', px: 2 }}
+                                >
+                                    <ExperienceCard
+                                      as={motion.div}
+                                      initial={{ scale: 0.8, opacity: 0 }}
+                                      whileInView={{ scale: 1, opacity: 1 }}
+                                      transition={{ duration: 0.5, delay: index * 0.2 }}
+                                      experience={experience}
+                                    />
                                 </TimelineContent>
                             </TimelineItem>
                         ))}
@@ -100,7 +152,7 @@ const Experience = () => {
                 </TimelineSection>
             </Wrapper>
         </Container>
-    )
-}
+    );
+};
 
 export default Experience;

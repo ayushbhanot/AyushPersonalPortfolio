@@ -8,7 +8,7 @@ roles: [
 ],
 description: "I'm a curious and driven individual passionate about learning and personal growth. I thrive on tackling challenges, exploring new ideas, and using software to solve meaningful problems and create lasting impact.",
 github: "https://github.com/ayushbhanot",
-resume: "https://drive.google.com/file/d/1ffZrcMcn8UatXGIaautbbapV7ADNaETA/view?usp=sharing",
+resume: "https://drive.google.com/file/d/1YcH4elfcGZ9QkVD-oKCwkGettqKvpcq6/view?usp=sharing",
 linkedin: "https://www.linkedin.com/in/ayush-bhanot/",
 education: {
   description: "I am currently pursuing a Bachelor of Engineering in Software Engineering at Western University.",
@@ -82,6 +82,7 @@ export const experiences = [
       "Database Management",
       "AWS",
     ],
+    duration: 1,
   },  
     {
         id: 1,
@@ -101,6 +102,7 @@ export const experiences = [
           "HTML",
           "CSS",
         ],
+        duration: 5,
         //doc: "PUT REFERENCE LETTER HERE",
       },      
     {
@@ -120,7 +122,9 @@ export const experiences = [
           "JotForm",
           "Business Central",
         ],
+        duration: 4,
       },
+      
       
     {
       id: 3,
@@ -137,6 +141,7 @@ export const experiences = [
         "DIIMS",
         "Collaboration",
       ],
+      duration: 16,
     },
   ];
 
