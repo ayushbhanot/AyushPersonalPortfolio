@@ -2,7 +2,7 @@
   "name": "ayush-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ayushbhanot.github.io/AyushPersonalPortfolio/",
+  "homepage": "/AyushPersonalPortfolio",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.11.0",
@@ -23,7 +23,7 @@
     "react-dom": "^18.0.0",
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.7",
     "react-tsparticles": "^2.12.2",
     "styled-components": "^5.3.5",
@@ -58,6 +58,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.2.0"
+    "gh-pages": "^6.2.0",
+    "html-webpack-plugin": "^5.6.3"
   }
 }
