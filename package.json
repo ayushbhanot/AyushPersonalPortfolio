@@ -2,7 +2,7 @@
   "name": "ayush-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ayushbhanot.github.io/AyushPersonalPortfolio",
+  "homepage": "https://ayushbhanot.github.io/AyushPersonalPortfolio/",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.11.0",
