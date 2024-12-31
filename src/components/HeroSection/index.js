@@ -5,9 +5,9 @@ import { TypewriterClass } from 'typewriter-effect';
 import Typewriter from "typewriter-effect";
 // import { tsParticles } from "https://cdn.jsdelivr.net/npm/@tsparticles/engine@3.0.3/+esm";
 // import { loadAll } from "https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/+esm";
-import Particles from 'react-tsparticles';
+// import Particles from '@tsparticles/react';
 import { loadFull } from 'tsparticles';
-
+import Particles from 'react-tsparticles'
 const HeroContainer = styled.div`
 background-color: ${({ theme }) => theme.card_light};
 display: flex;
@@ -317,7 +317,9 @@ const [centerX, setCenterX] = useState(0);
 const [centerY, setCenterY] = useState(0);
 const containerRef = useRef(null);
 const particlesInit = async (engine) => {
-  await loadFull(engine);}
+  console.log("Particles initialized", engine);
+  await loadFull(engine);
+};
 // const configs = {
 //   particles: {
 //     number: {
@@ -486,7 +488,7 @@ const particlesOptions = {
 
 return (
 <div id="about">
-<Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
+<Particles id="tsparticles" init={particlesInit} options={particlesOptions}/>
 <HeroContainer>
 <HeroBg>
 </HeroBg>
