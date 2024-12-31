@@ -3,8 +3,10 @@ import styled from 'styled-components';
 import { Bio } from '../../data/constant';
 import { TypewriterClass } from 'typewriter-effect';
 import Typewriter from "typewriter-effect";
-import { tsParticles } from "https://cdn.jsdelivr.net/npm/@tsparticles/engine@3.0.3/+esm";
-import { loadAll } from "https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/+esm";
+// import { tsParticles } from "https://cdn.jsdelivr.net/npm/@tsparticles/engine@3.0.3/+esm";
+// import { loadAll } from "https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/+esm";
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
 
 const HeroContainer = styled.div`
 background-color: ${({ theme }) => theme.card_light};
@@ -189,7 +191,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-z-index: ;
+z-index: 0;
 `;
 
 const SocialContainer = styled.div`
@@ -314,7 +316,107 @@ const Hero = () => {
 const [centerX, setCenterX] = useState(0);
 const [centerY, setCenterY] = useState(0);
 const containerRef = useRef(null);
-const configs = {
+const particlesInit = async (engine) => {
+  await loadFull(engine);}
+// const configs = {
+//   particles: {
+//     number: {
+//       value: 80,
+//       density: {
+//         enable: true,
+//         value_area: 800,
+//       },
+//     },
+//     color: {
+//       value: "#ffffff",
+//     },
+//     shape: {
+//       type: "circle",
+//       stroke: {
+//         width: 0,
+//         color: "#000000",
+//       },
+//     },
+//     opacity: {
+//       value: 0.5,
+//       random: false,
+//       anim: {
+//         enable: false,
+//         speed: 1,
+//         opacity_min: 0.1,
+//         sync: false,
+//       },
+//     },
+//     size: {
+//       value: 3,
+//       random: true,
+//       anim: {
+//         enable: false,
+//         speed: 40,
+//         size_min: 0.1,
+//         sync: false,
+//       },
+//     },
+//     line_linked: {
+//       enable: true,
+//       distance: 150,
+//       color: "#ffffff",
+//       opacity: 0.4,
+//       width: 1,
+//     },
+//     move: {
+//       enable: true,
+//     },
+//   },
+//   interactivity: {
+//     detect_on: "canvas",
+//     events: {
+//       onhover: {
+//         enable: true,
+//         mode: "repulse",
+//       },
+//       onclick: {
+//         enable: true,
+//         mode: "push",
+//       },
+//       resize: true,
+//     },
+//     modes: {
+//       grab: {
+//         distance: 400,
+//         line_linked: {
+//           opacity: 1,
+//         },
+//       },
+//       bubble: {
+//         distance: 400,
+//         size: 40,
+//         duration: 2,
+//         opacity: 0.8,
+//         speed: 3,
+//       },
+//       repulse: {
+//         distance: 200,
+//         duration: 0.4,
+//       },
+//       push: {
+//         particles_nb: 4,
+//       },
+//       remove: {
+//         particles_nb: 2,
+//       },
+//     },
+//   },
+//   background: {
+//     color: "transparent",
+//   },
+// };
+
+const particlesOptions = {
+  fullScreen: {
+    enable: true,
+    zIndex: 0,
+  },
   particles: {
     number: {
       value: 80,
@@ -324,109 +426,67 @@ const configs = {
       },
     },
     color: {
-      value: "#ffffff",
+      value: '#ffffff',
     },
     shape: {
-      type: "circle",
-      stroke: {
-        width: 0,
-        color: "#000000",
-      },
+      type: 'circle',
     },
     opacity: {
       value: 0.5,
-      random: false,
-      anim: {
-        enable: false,
-        speed: 1,
-        opacity_min: 0.1,
-        sync: false,
-      },
     },
     size: {
       value: 3,
       random: true,
-      anim: {
-        enable: false,
-        speed: 40,
-        size_min: 0.1,
-        sync: false,
-      },
-    },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#ffffff",
-      opacity: 0.4,
-      width: 1,
     },
     move: {
       enable: true,
+      speed: 2,
     },
   },
   interactivity: {
-    detect_on: "canvas",
     events: {
       onhover: {
         enable: true,
-        mode: "repulse",
+        mode: 'bubble',
       },
       onclick: {
         enable: true,
-        mode: "push",
+        mode: 'push',
       },
-      resize: true,
     },
     modes: {
-      grab: {
-        distance: 400,
-        line_linked: {
-          opacity: 1,
-        },
-      },
-      bubble: {
-        distance: 400,
-        size: 40,
-        duration: 2,
-        opacity: 0.8,
-        speed: 3,
-      },
       repulse: {
         distance: 200,
-        duration: 0.4,
       },
       push: {
         particles_nb: 4,
       },
-      remove: {
-        particles_nb: 2,
-      },
     },
   },
+  retina_detect: true,
   background: {
-    color: "transparent",
+    color: '#111',
   },
 };
 
-
-useEffect(() => {
-const loadParticles = async () => {
-await loadAll(tsParticles);
-await tsParticles.load({
-id: "tsparticles",
-options: configs,
-});
-const container = containerRef.current;
-const containerRect = container.getBoundingClientRect();
-const centerX = containerRect.left + containerRect.width / 2;
-const centerY = containerRect.top + containerRect.height / 2;
-};
-loadParticles();
-}, []);
+// useEffect(() => {
+// const loadParticles = async () => {
+// await loadAll(tsParticles);
+// await tsParticles.load({
+// id: "tsparticles",
+// options: configs,
+// });
+// const container = containerRef.current;
+// const containerRect = container.getBoundingClientRect();
+// const centerX = containerRect.left + containerRect.width / 2;
+// const centerY = containerRect.top + containerRect.height / 2;
+// };
+// loadParticles();
+// }, []);
 
 return (
 <div id="about">
-<ParticleContainer id="tsparticles" ref={containerRef}></ParticleContainer>
+<Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
 <HeroContainer>
 <HeroBg>
 </HeroBg>

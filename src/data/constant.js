@@ -10,6 +10,7 @@ description: "I'm a curious and driven individual passionate about learning and 
 github: "https://github.com/ayushbhanot",
 resume: "https://drive.google.com/file/d/1YcH4elfcGZ9QkVD-oKCwkGettqKvpcq6/view?usp=sharing",
 linkedin: "https://www.linkedin.com/in/ayush-bhanot/",
+email: "ayushbhanot1010@gmail.com",
 education: {
   description: "I am currently pursuing a Bachelor of Engineering in Software Engineering at Western University.",
   graduationYear: 2026,
