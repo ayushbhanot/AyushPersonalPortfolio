@@ -174,7 +174,6 @@ const ResumeButton = styled.a`
   transition: all 0.2s ease-in-out !important;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
-  /* Gradient based on website theme */
   background: linear-gradient(to right, #007bff, #00c853); 
   color: #fff; 
 

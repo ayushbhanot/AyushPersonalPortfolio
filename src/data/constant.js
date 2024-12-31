@@ -1,12 +1,12 @@
 export const Bio = {
 name: "Ayush Bhanot",
 roles: [
+"Software Engineer",
 "Full Stack Developer",
-"Android Developer",
-"UI/UX Designer",
-"Programmer",
+"Data and Cloud Enthusiast",
+
 ],
-description: "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivi",
+description: "I'm a curious and driven individual passionate about learning and personal growth. I thrive on tackling challenges, exploring new ideas, and using software to solve meaningful problems and create lasting impact.",
 github: "https://github.com/ayushbhanot",
 resume: "https://drive.google.com/file/d/1ffZrcMcn8UatXGIaautbbapV7ADNaETA/view?usp=sharing",
 linkedin: "https://www.linkedin.com/in/ayush-bhanot/",

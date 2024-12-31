@@ -4,7 +4,7 @@ import {darkTheme} from './util/Theme';
 import NavBar from './components/NavBar';
 import Hero from './components/HeroSection';
 import Skills from './components/Skills';
-import Education from './components/Education';
+import Contact from './components/Contact';
 import Experience from './components/Experience';
 import { BrowserRouter as Router } from "react-router-dom";
 import Projects from './components/Projects';
@@ -42,9 +42,9 @@ function App() {
         <Wrapper>
         <Skills />
         <Experience />
-        <Education />
         </Wrapper>
         <Projects />
+        <Contact />
       </Body>
       </Router>
     </ThemeProvider>
