@@ -2,7 +2,7 @@
   "name": "ayush-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/AyushPersonalPortfolio",
+  "homepage": "/",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.11.0",
@@ -27,7 +27,7 @@
     "react-scroll": "^1.8.7",
     "react-tsparticles": "^2.12.2",
     "styled-components": "^5.3.5",
-    "tsparticles": "^2.12.0",
+    "tsparticles": "^3.7.1",
     "typewriter-effect": "^2.19.0",
     "web-vitals": "^2.1.4"
   },
@@ -58,6 +58,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.2.0",
     "html-webpack-plugin": "^5.6.3"
   }
