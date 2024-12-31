@@ -74,7 +74,7 @@ const NavLink = styled.a`
   }
 `;
 
-const GithubButton = styled.button`
+const GithubButton = styled.a`
   background-color: transparent;
   color: ${({ theme }) => theme.accent};
   border: 1.8px solid ${({ theme }) => theme.accent};
@@ -85,6 +85,7 @@ const GithubButton = styled.button`
   padding: 0px 20px;
   font-size: 1rem;
   font-weight: 500;
+  text-decoration: none;
   cursor: pointer;
   height: 70%;
   &:hover {
@@ -95,7 +96,6 @@ const GithubButton = styled.button`
     font-size: 0.8rem;
   }
 `;
-
 const Span = styled.span`
   padding: 0 4px;
   font-weight: bold;
@@ -159,7 +159,12 @@ const NavBar = () => {
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#education">Education</NavLink>
         </NavItems>
-        <GithubButton>Github Profile</GithubButton>
+        <GithubButton
+          href="https://github.com/ayushbhanot"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Github Profile
+        </GithubButton>
       </NavContainer>
 
       {open && (
@@ -186,7 +191,7 @@ const NavBar = () => {
               color: "white",
               width: "max-content",
             }}
-            href="/"
+            href="https://github.com/ayushbhanot"
             target="_blank"
           >
             Github Profile

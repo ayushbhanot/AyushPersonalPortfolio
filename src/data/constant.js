@@ -10,9 +10,12 @@ description: "I am a motivated and versatile individual, always eager to take on
 github: "https://github.com/ayushbhanot",
 resume: "https://drive.google.com/file/d/1ffZrcMcn8UatXGIaautbbapV7ADNaETA/view?usp=sharing",
 linkedin: "https://www.linkedin.com/in/ayush-bhanot/",
+education: {
+  description: "I am currently pursuing a Bachelor of Engineering in Software Engineering at Western University.",
+  graduationYear: 2026,
+  logo: "/assets/Western.svg"
+},
 };
-
-
 
 export const skills = [
     {
@@ -172,12 +175,12 @@ export const experiences = [
       "Express.js"],
       category: "web app",
       github: "https://github.com/ayushbhanot/NoteTakingTool",
-      // webapp: "https://podstream.netlify.app/",
+      // webapp: ,
       // member: [
       // ],
     },
     {
-      id: 2,
+      id: 0,
       title: "Pokémon Adventure Game",
   description:
     "Embark on a thrilling Pokémon-inspired adventure with this feature-packed game built in Unity using C#. Experience dynamic AI-driven battles with type-effectiveness logic, strategic move selection, and the excitement of capturing and evolving Pokémon. The game includes free-roam exploration, leveling systems, and party management, allowing players to tailor their strategy. With immersive animations, interactive battle mechanics, and many more features, this game offers a rich and engaging Pokémon-inspired experience.",
@@ -192,8 +195,8 @@ export const experiences = [
   
   export const TimeLineData = [
     { year: 2017, text: "Started my journey" },
-    { year: 2018, text: "Worked as a freelance developer" },
-    { year: 2019, text: "Founded JavaScript Mastery" },
-    { year: 2020, text: "Shared my projects with the world" },
-    { year: 2021, text: "Started my own platform" },
+    { year: 2018, text: "s" },
+    { year: 2019, text: "s" },
+    { year: 2020, text: "d" },
+    { year: 2021, text: "" },
   ];
