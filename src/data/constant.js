@@ -8,7 +8,7 @@ roles: [
 ],
 description: "I'm a curious and driven individual passionate about learning and personal growth. I thrive on tackling challenges, exploring new ideas, and using software to solve meaningful problems and create lasting impact.",
 github: "https://github.com/ayushbhanot",
-resume: "https://drive.google.com/file/d/1YcH4elfcGZ9QkVD-oKCwkGettqKvpcq6/view?usp=sharing",
+resume: "https://drive.google.com/file/d/1XzbNvtJQeL6putUmD5a7pMRM-WDZcq5g/view?usp=sharing",
 linkedin: "https://www.linkedin.com/in/ayush-bhanot/",
 email: "ayushbhanot1010@gmail.com",
 education: {

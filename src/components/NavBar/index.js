@@ -140,7 +140,7 @@ const NavBar = () => {
       <NavContainer>
         <NavLogo to="/">
           <DiCssdeck size={48} />
-          <Span>Portfolio</Span>
+          <Span>Ayush's Portfolio</Span>
         </NavLogo>
         <MobileIcon>
           <FaBars
