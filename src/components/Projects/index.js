@@ -51,11 +51,23 @@ const Description = styled(motion.div)`
 
 const CardContainer = styled(motion.div)`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; // center all cards
+  align-items: flex-start;
+  gap: 24px;
   flex-wrap: wrap;
-  gap: 20px;
+  padding: 20px 0;
+
+  @media (min-width: 1280px) {
+    flex-wrap: nowrap; // 4 cards side by side
+  }
+
+  @media (max-width: 1279px) {
+    flex-wrap: wrap;
+  }
 `;
+
+
+
 
 const Projects = () => {
   const [active, setToggle] = useState('ALL'); // Toggle state (optional)
@@ -105,24 +117,26 @@ const Projects = () => {
             },
           }}
         >
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              whileHover={{
-                scale: 1.05,
-                transition: { duration: 0.3 },
-              }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              onClick={() => setOpenModal({ state: true, project })}
-            >
-              <ProjectCard project={project} setOpenModal={setOpenModal} />
-            </motion.div>
-          ))}
+{projects.map((project, index) => (
+  <motion.div
+    key={project.id}
+    variants={{
+      hidden: { opacity: 0, y: 50 },
+      visible: { opacity: 1, y: 0 },
+    }}
+    whileHover={{
+      scale: 1.05,
+      transition: { duration: 0.3 },
+    }}
+    whileTap={{ scale: 0.95 }}
+    transition={{ duration: 0.5, delay: index * 0.2 }}
+    onClick={() => setOpenModal({ state: true, project })}
+  >
+    <ProjectCard project={project} setOpenModal={setOpenModal} />
+  </motion.div>
+))}
+
+
         </CardContainer>
       </Wrapper>
 
