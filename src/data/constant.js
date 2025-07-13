@@ -152,18 +152,17 @@ export const experiences = [
       title: "Data HealthCare App",
       description:
   "Developed a cross-platform mobile app for DataCare LLC to streamline patient registration and real-time data collection at healthcare camps. Built with React Native and Expo, the app features dynamic medical forms, photo ID uploads, JWT-based authentication, and real-time syncing with a secure backend powered by Node.js, Express, and YugabyteDB on GCP.",
-      image:
-        "https://raw.githubusercontent.com/ayushbhanot/HealthCareDataAppPersonal/main/assets/gif/home.gif",
+  image: "https://raw.githubusercontent.com/ayushbhanot/HealthCareDataApp/ayush/assets/gif/home.gif",
       tags: [
         "React Native",
         "Node.js",
         "Express.js",
         "YugabyteDB",
-        "JWT Auth",
-        "Multer",
+        "JWT",
         "Mobile App",
         "GCP"
-      ],
+      ]
+      ,
       category: "mobile app",
       github: "https://github.com/ayushbhanot/HealthCareDataAppPersonal",
       // webapp: "", // if deployed mobile app store link or APK is available
