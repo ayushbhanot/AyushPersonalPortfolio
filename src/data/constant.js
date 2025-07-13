@@ -90,7 +90,7 @@ export const experiences = [
         img: "https://media.licdn.com/dms/image/v2/D560BAQGmH_m7mIN5yg/company-logo_200_200/company-logo_200_200/0/1687631667008/ment_findyourmentor_logo?e=1755129600&v=beta&t=_y2-WwE-fKaE98TnPkc8rA2IYTijPpP1R510Zx54tlk",
         role: "Web & Algorithm Development Intern",
         company: "MENT",
-        date: "Aug 2024 – Dec 2024",
+        date: "Aug 2024 – Mar 2025",
         desc: "As a Web & Algorithm Development Intern at MENT, I independently developed web tools aimed at supporting MENT's goal of assisting international students. Leveraging full-stack development with React.js, I created tools tailored to the platform's requirements and aligned the UI design with the company’s theme. Additionally, I collaborated with another intern to contribute to the development of the company website, ensuring a cohesive and seamless user experience.",
         skills: [
           "Full-Stack Development",
