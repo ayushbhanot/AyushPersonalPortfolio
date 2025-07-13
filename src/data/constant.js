@@ -70,24 +70,24 @@ export const skills = [
   
 
 export const experiences = [
-  {
-    id: 0,
-    img: "https://media.licdn.com/dms/image/v2/D560BAQGmH_m7mIN5yg/company-logo_200_200/company-logo_200_200/0/1687631667008/ment_findyourmentor_logo?e=1743638400&v=beta&t=MAduLireHcNC2sb704DP_A7cqa_9tHIzGeobpe82Aaw",
-    role: "Data and Cloud Specialist Intern",
-    company: "MENT",
-    date: "Jan 2025 – Present",
-    desc: "In this role, I manage and curate data to develop tools and enhance predictive solutions. I also utilize AWS services to support cloud infrastructure, ensuring scalability and efficiency in data workflows.",
-    skills: [
-      "Data Organization",
-      "Data Analysis",
-      "Database Management",
-      "AWS",
-    ],
-    duration: 1,
-  },  
+  // {
+  //   id: 0,
+  //   img: "https://media.licdn.com/dms/image/v2/D560BAQGmH_m7mIN5yg/company-logo_200_200/company-logo_200_200/0/1687631667008/ment_findyourmentor_logo?e=1755129600&v=beta&t=_y2-WwE-fKaE98TnPkc8rA2IYTijPpP1R510Zx54tlk",
+  //   role: "Data and Cloud Specialist Intern",
+  //   company: "MENT",
+  //   date: "Jan 2025 – Present",
+  //   desc: "In this role, I manage and curate data to develop tools and enhance predictive solutions. I also utilize AWS services to support cloud infrastructure, ensuring scalability and efficiency in data workflows.",
+  //   skills: [
+  //     "Data Organization",
+  //     "Data Analysis",
+  //     "Database Management",
+  //     "AWS",
+  //   ],
+  //   duration: 1,
+  // },  
     {
         id: 1,
-        img: "https://media.licdn.com/dms/image/v2/D560BAQGmH_m7mIN5yg/company-logo_200_200/company-logo_200_200/0/1687631667008/ment_findyourmentor_logo?e=1743638400&v=beta&t=MAduLireHcNC2sb704DP_A7cqa_9tHIzGeobpe82Aaw",
+        img: "https://media.licdn.com/dms/image/v2/D560BAQGmH_m7mIN5yg/company-logo_200_200/company-logo_200_200/0/1687631667008/ment_findyourmentor_logo?e=1755129600&v=beta&t=_y2-WwE-fKaE98TnPkc8rA2IYTijPpP1R510Zx54tlk",
         role: "Web & Algorithm Development Intern",
         company: "MENT",
         date: "Aug 2024 – Dec 2024",
