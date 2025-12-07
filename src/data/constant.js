@@ -86,8 +86,31 @@ export const experiences = [
   //   duration: 1,
   // },  
     {
-        id: 1,
-        img: "https://media.licdn.com/dms/image/v2/D560BAQGmH_m7mIN5yg/company-logo_200_200/company-logo_200_200/0/1687631667008/ment_findyourmentor_logo?e=1755129600&v=beta&t=_y2-WwE-fKaE98TnPkc8rA2IYTijPpP1R510Zx54tlk",
+      id: 1,
+      img: "https://media.licdn.com/dms/image/v2/C560BAQHpAVLnc5DM5w/company-logo_200_200/company-logo_200_200/0/1657205667286/geotab_logo?e=1766620800&v=beta&t=KL4BxffDgLrzZtHmKWNVCPDL3y5ful_GoNqfI6nJuVg",
+      role: "Technical Business Analyst Intern",
+      company: "Geotab",
+      date: "Sep 2025 – Present",
+      desc: "Conducting business analysis and contributing to the development of internal tools that streamline workflows across Geotab teams.",
+      skills: [
+        "Full-Stack Development",
+        "React.js",
+        "Python",
+        "SQL",
+        "Business Analysis",
+        "APIs",
+        "UI Design",
+        "Jira",
+        "GCP",
+        "HTML",
+        "CSS",
+      ],
+      duration: 1,
+    },
+  
+       {
+        id: 2,
+        img: "https://media.licdn.com/dms/image/v2/D560BAQGmH_m7mIN5yg/company-logo_200_200/company-logo_200_200/0/1687631667008/ment_findyourmentor_logo?e=1766620800&v=beta&t=JIQfygE0JGTArvVSkcHtysq_Od_LgbQN1p3xZ-oDBSI",
         role: "Web & Algorithm Development Intern",
         company: "MENT",
         date: "Aug 2024 – Mar 2025",
@@ -107,7 +130,7 @@ export const experiences = [
         //doc: "PUT REFERENCE LETTER HERE",
       },      
     {
-        id: 2,
+        id: 3,
         img: "https://media.licdn.com/dms/image/v2/C560BAQEJBHmd3WuAWA/company-logo_200_200/company-logo_200_200/0/1674251302338/arhtmediainc_logo?e=2147483647&v=beta&t=wAhg7-mt7GxJkCgRV88hjn842Z7oAyBFS9C5cqMvqLc",
         role: "API Automation Development Intern",
         company: "ARHT Media Inc.",
@@ -128,7 +151,7 @@ export const experiences = [
       
       
     {
-      id: 3,
+      id: 4,
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNMWKFkUPJhL9aNe1PkOUdMZMnFKsjmroxiw&s",
       role: "Corporate Records Management Assistant",
       company: "Government of Northwest Territories",
