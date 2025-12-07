@@ -13,7 +13,7 @@ linkedin: "https://www.linkedin.com/in/ayush-bhanot/",
 email: "ayushbhanot1010@gmail.com",
 education: {
   description: "I am currently pursuing a Bachelor of Engineering in Software Engineering at Western University.",
-  graduationYear: 2026,
+  graduationYear: 2027,
   logo: "assets/Western.svg"
 },
 };
