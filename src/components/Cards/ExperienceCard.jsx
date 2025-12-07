@@ -141,7 +141,45 @@ const Skill = styled.div`
     @media only screen and (max-width: 768px){
         font-size: 12px;
     }
-`
+`;
+
+const DocumentWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;   /* moves it to the right */
+  margin-top: 6px;
+`;
+
+const DocumentRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+const DocumentLabel = styled.div`
+  font-size: 14px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary + 99};
+`;
+
+const ViewButton = styled.button`
+  padding: 6px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid #3AAFB9;
+  background: transparent;
+  color: #3AAFB9;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #3AAFB9;
+    color: #000;
+    transform: translateY(-1px);
+  }
+`;
+
 
 
 
@@ -173,12 +211,25 @@ const ExperienceCard = ({ experience }) => {
                             </Skills>
                         </>
                     )}
-                </Description>
+                 </Description>
+                 {/*
                 {experience.doc && (
                     <a href={experience.doc} target="new">
                         <Document src={experience.doc} />
                     </a>
-                )}
+                )} */}
+               {experience.docLink && (
+  <DocumentWrapper>
+    <DocumentRow>
+      <DocumentLabel>Recommendation Letter:</DocumentLabel>
+      <a href={experience.docLink} target="_blank" rel="noreferrer">
+        <ViewButton>View</ViewButton>
+      </a>
+    </DocumentRow>
+  </DocumentWrapper>
+)}
+
+
             </Card>
         );
     };

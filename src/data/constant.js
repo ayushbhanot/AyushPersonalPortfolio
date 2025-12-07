@@ -126,6 +126,7 @@ export const experiences = [
           "HTML",
           "CSS",
         ],
+        docLink: "https://drive.google.com/file/d/1jmBbAfFEN3SxKOb0WwTndlbQkpQez_FZ/view?usp=sharing",
         duration: 5,
         //doc: "PUT REFERENCE LETTER HERE",
       },      
